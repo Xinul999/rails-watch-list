@@ -1,0 +1,33 @@
+Result : https://stackoverflow.com/questions/54062378/ruby-version-error-when-pushing-to-heroku
+Solution : https://upokary.com/the-ruby-version-you-are-trying-to-install-does-not-exist-on-this-stack/
+
+remote:
+remote:  !
+remote:  !     The Ruby version you are trying to install does not exist on this stack.
+remote:  !
+remote:  !     You are trying to install ruby-2.7.0 on heroku-20.
+remote:  !
+remote:  !     Ruby ruby-2.7.0 is present on the following stacks:
+remote:  !
+remote:  !     - heroku-18
+remote:  !
+remote:  !     Heroku recommends you use the latest supported Ruby version listed here:
+remote:  !     https://devcenter.heroku.com/articles/ruby-support#supported-runtimes
+remote:  !
+remote:  !     For more information on syntax for declaring a Ruby version see:
+remote:  !     https://devcenter.heroku.com/articles/ruby-versions
+remote:  !
+remote:  !     Push rejected, failed to compile Ruby app.
+remote:
+remote:  !     Push failed
+remote: Verifying deploy...
+remote:
+remote: !       Push rejected to fake-films-app-wagon-660.
+remote:
+
+
+
+Fix with :
+heroku stack:set heroku-18
+
+Problem with bundler 2.2.21
