@@ -1,0 +1,10 @@
+<h1> Lists all films</h1>
+
+<%= @movies.each do |f| %>
+  <section>
+    <h2><%= link_to f.title, movie_path(f) %></h2>
+    <textarea disabled><%=f.overview %></textarea>
+    <div><img src="<%=f.poster_url%>" /></div>
+    <p><%= f.rating %></p>
+  </section>
+<% end %>
